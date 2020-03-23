@@ -3,7 +3,11 @@ package pers.huhao.HHsUtils.utils;
 public class HHsIntegerUtil {
 
     public static int get(String in) {
-        return Integer.valueOf(in).intValue();
+        try {
+            return Integer.parseInt(in);
+        } catch (Exception e) {
+            return 0;
+        }
     }
 
 }
