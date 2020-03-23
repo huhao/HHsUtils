@@ -5,6 +5,8 @@ import java.util.Map;
 
 public class HHsHttpUtil {
 
+    private static final String EMPTY = "";
+
     public static Map<String, Object> getUrlParams(String param) {
         Map<String, Object> map = new HashMap<>();
 
@@ -19,5 +21,17 @@ public class HHsHttpUtil {
             }
         }
         return map;
+    }
+
+    public static String getUrlParamsByMap(Map<String, Object> map) {
+        if (HHsObjectUtil.isNull(map)) return EMPTY;
+
+        StringBuffer sb = new StringBuffer();
+
+        for (Map.Entry<String, Object> entry : map.entrySet()) {
+            sb.append(entry.getKey() + "=" + entry.getValue() + "&");
+        }
+        String s = sb.toString();
+
     }
 }
