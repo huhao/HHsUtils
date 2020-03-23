@@ -33,5 +33,6 @@ public class HHsHttpUtil {
         }
         String s = sb.toString();
 
+        return s.endsWith("&") ? HHsStringUtil.substringBeforeLast(s, "&") : s;
     }
 }
