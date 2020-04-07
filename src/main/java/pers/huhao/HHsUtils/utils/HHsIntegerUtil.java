@@ -10,4 +10,7 @@ public class HHsIntegerUtil {
         }
     }
 
+    public static int getRandom() {
+        return (int) ((Math.random() * 9 + 1) * 100000);
+    }
 }
