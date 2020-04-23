@@ -1,4 +1,4 @@
-package pers.huhao.HHsUtils.utils;
+package pers.huhao.HHsUtils.utils.time;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
