@@ -1,18 +1,11 @@
 package pers.huhao.HHsUtils.utils;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-
 public class HHsStringUtil {
 
     public static final int INDEX_NOT_FOUND = -1;
 
     public static String get(Object in) {
-        return in == null ? "" : String.valueOf(in);
+        return in == null ? getBlankStr() : String.valueOf(in);
     }
 
     public static boolean isEmpty(final String str) {
